@@ -1,0 +1,45 @@
+\documentclass[a4paper, 12pt, french]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+
+\begin{document}
+   \section{Notes}
+   \label{sec:notes}
+   Pour faire des notes, nous pouvons utiliser plusieurs commandes. L’une d’elle permet 
+   d’avoir des notes de marges, les deux autres des notes de bas de page.
+
+   \section{Figures et equations}
+
+   Voici comment insérer une figure et une équation, on verra plus tard dans le détail les éléments non textuel. 
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=10cm]{image.jpg}
+  \caption{Légende.}
+  \label{fig:monimage}
+\end{figure}
+
+\begin{equation}
+  E = mc^{2}
+  \label{eq:einstein}
+\end{equation}
+
+\section{Un tas de lorem ipsum}
+
+\lipsum[1-50]
+
+   \section{Les références}
+   Dans ce document, nous avons parlé des notes dans la section % ici insérer la référence au numéro de section. 
+   qui est à la page %ici insérer la référence à la page de la section sur les notes.
+
+   Comme le montre la figure %ici insérer la référence au numéro de figure
+   et la démonstration %ici insérer la référence au numéro de l'équation
+   LaTeX est vraiment un langage sympa. 
+
+   %Bonus : j'ai vraiment la flemme d'écrire "figure" à chaque fois et en plus je n'aime pas le terme : lire la documentation de cleveref : pour avoir "Image 1" (avec une majuscule). 
+\end{document}

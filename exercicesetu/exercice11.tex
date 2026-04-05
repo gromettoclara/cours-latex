@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+
+% ================================================
+% EXERCICE
+% ================================================
+%
+% Ce document est un livre recto/verso avec trois chapitres.
+% Il est actuellement mal structuré et sans mise en page des en-têtes.
+%
+% 1. Repérez les trois grandes parties du document :
+%      - les pages liminaires (page de titre, table des matières et introduction)
+%      - le contenu principal (les chapitres)
+% 2. Utilisez \frontmatter et \mainmatter pour les délimiter.
+%    Observez l'effet sur la numérotation des pages.
+%
+% Configurez fancyhdr pour obtenir :
+%
+%   EN-TÊTE :
+%     - verso  (page paire)   : titre du livre   à gauche  (extérieur)
+%     - recto  (page impaire) : chapitre courant à droite  (extérieur)
+%
+%   PIED DE PAGE :
+%     - numéro de page toujours vers l'extérieur
+%
+% BONUS
+% ------
+% Les pages de \frontmatter ne doivent pas avoir d'en-tête.
+% Utilisez \pagestyle{plain} au bon endroit.
+% ================================================
+
+\begin{document}
+
+\title{Les Héros D'Euripide}
+\author{Eugénie Grandet}
+\maketitle
+
+\tableofcontents
+
+\chapter{Introduction}
+
+\chapter{Alceste}
+\lipsum[1-4]
+\lipsum[5-8]
+\lipsum[9-12]
+
+\chapter{Médée}
+\lipsum[13-16]
+\lipsum[17-20]
+\lipsum[21-24]
+
+\chapter{Hippolyte porte-couronne}
+\lipsum[25-28]
+\lipsum[29-32]
+\lipsum[33-36]
+
+\end{document}

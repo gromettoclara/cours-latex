@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+% ------------------------------------------------
+% NIVEAU FACILE
+% ------------------------------------------------
+% Créez une commande \chap{#1} telle que :
+%   le \chap{3}
+%
+% donne : "le chapitre 3"
+% avec une espace insécable entre "chapitre" et le numéro
+% ------------------------------------------------
+
+
+% ------------------------------------------------
+% NIVEAU INTERMÉDIAIRE
+% ------------------------------------------------
+% Créez une commande \siecle{#1} telle que :
+%
+%   Au \siecle{3} de notre ère
+%
+% donne : « Au IIIᵉ siècle de notre ère »
+%
+%   - le chiffre doit être en small caps (utiliser le package romannum et consulter la doc)
+%   - espace insécable entre le numéro et "siècle"
+% ------------------------------------------------
+
+% ================================================
+\begin{document}
+
+% -- Test niveau facile --
+le \chap{3}
+
+% -- Test niveau intermédiaire --
+Au \siecle{3} de notre ère
+
+\end{document}

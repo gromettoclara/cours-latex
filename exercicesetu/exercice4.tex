@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+\begin{document}
+
+% ---- liste imbriquée ----
+Les pieuvres sont des créatures d'une intelligence déconcertante.
+
+%créer une liste non ordonnée à deux niveaux. 
+
+%elles peuvent ouvrir un bocal fermé depuis l'intérieur ;
+% elles utilisent des outils : (nouvel item) transporter des coquilles de noix de coco pour s'abriter et (nouvel item) empiler des rochers pour barricader leur tanière
+% elles reconnaissent les visages humains individuellement.
+
+Aucun vertébré n'a le monopole de l'ingéniosité.
+
+\hline
+
+% ---- liste avec des carrés ----
+Avant de partir en randonnée, je prends~:
+
+%créer une liste non ordonnée dont les puces sont des carrés
+
+%carte et boussole ;
+%trousse de premiers secours ;
+%ation de secours (barres énergétiques, fruits secs).
+
+La documentation du package enumitem, qui permet de
+personnaliser ces marqueurs, est disponible sur
+\url{https://ctan.org/pkg/enumitem}. Je veux une liste qui prend le carré comme puce.
+
+\hline
+
+% ---- liste ordonnée A. B. C. (environnement enumerate)----
+Plan du chapitre sur la première guerre mondiale~:
+
+% Créer une liste ordonnée avec des lettres majuscules comme marqueurs (A, B, C…)
+% en utilisant l'option label= du package enumitem.
+
+%L’entrée en guerre et la formation des fronts ;
+%Les opérations sur le front Ouest en 1915 et en 1916 ;
+%La guerre totale ;
+
+\hline
+
+% ---- liste en deux parties (sans faire recommencer la numérotation à 0) ----
+
+% Créer deux listes enumerate séparées par un paragraphe de texte.
+% La numérotation de la seconde liste doit continuer celle de la première
+% (4, 5… au lieu de repartir à 1) grâce à l'option resume d'enumitem.
+
+Recette de la tarte aux pommes~:
+%1. mélanger la farine, le beurre froid et une pincée de sel ;
+%2. ajouter un peu d'eau froide et former une boule sans trop pétrir ;
+%3. laisser reposer la pâte au réfrigérateur pendant trente minutes.
+Pendant ce temps, on prépare la garniture~:
+%4. éplucher les pommes, les couper en fines lamelles ;
+%5. les disposer en rosace sur le fond de tarte précuit.
+
+\end{document}
