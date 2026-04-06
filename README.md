@@ -80,3 +80,12 @@ INFOPATH=/usr/local/texlive/2025/texmf/doc/info:$INFOPATH; export INFOPATH
 - [Papeeria](https://www.papeeria.com/) vous permet d'éditer gratuitement un projet à la fois
 - Un serveur Overleaf auto-hébergé est accessible pendant les séances de cours. Attention, les données ne seront pas sauvegardées et pourront être effacées. L’URL d’accès est : http://overleaf-lsh.univ-rouen.fr. **Cette URL n’est accessible que depuis les salles de cours du bâtiment informatique 6B de l’UFR**. Pour tester cette solution, il est nécessaire de créer des comptes utilisateurs en indiquant vos adresses mail universitaires. Une fois enregistrés, vous recevrez un message sur vos boîte universitaire vous invitant à vous connecter au serveur Overleaf-LSH et à choisir un mot de passe
 - Les postes de la salle 204 sont équipés de LaTeX et de TeXStudio
+
+## Évaluation 
+
+1H30 lors du dernier cours
+
+- 50% questions de cours
+- 50% exercices
+
+Le cours, la prof et google à disposition. 
