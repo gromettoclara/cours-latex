@@ -17,7 +17,7 @@ Pour écrire et compiler du LaTeX, vous avez besoin :
 - avoir la distribution LaTeX installée sur votre machine
 
 ### [Lien vers le premier lot d'exercices](https://github.com/gromettoclara/cours-latex/tree/main/exercicesetu)
-### [Lien vers les exercices "bonus" sur l'édition critique]()
+### [Lien vers les exercices "bonus" sur l'édition critique](https://github.com/gromettoclara/cours-latex/tree/main/exercicesEdCritique)
 
 ### Installer LaTeX
 
