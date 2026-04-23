@@ -16,6 +16,9 @@ Pour écrire et compiler du LaTeX, vous avez besoin :
 - d'ouvrir un terminal pour lancer la commande
 - avoir la distribution LaTeX installée sur votre machine
 
+### [Lien vers le premier lot d'exercices]()
+### [Lien vers les exercices "bonus" sur l'édition critique]()
+
 ### Installer LaTeX
 
 Attention, la TeXLive est très lourde et assez longue à installer. 

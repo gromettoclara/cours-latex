@@ -1,0 +1,178 @@
+\documentclass[a4paper,12pt,twoside, titlepage]{book}
+\usepackage[latin,french]{babel}
+
+\usepackage{fontspec}
+\defaultfontfeatures[Old Standard]{%utiliser oldstandard pour imprimer le grec
+Extension = .otf, 
+UprightFont = OldStandard-Regular,  
+ItalicFont = OldStandard-Italic,  
+BoldFont = OldStandard-Bold,  
+BoldItalicFont = OldStandard-BoldItalic,  
+SlantedFont = OldStandard-Regular,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFont = OldStandard-Bold,
+BoldSlantedFeatures = {FakeSlant=0.25}
+}
+\setmainfont{Old Standard}
+\usepackage[poetry=verse]{ekdosis}
+
+\SetAlignment{
+texts=translation;edition,
+apparatus=edition
+}
+
+\title{exercice Ekdosis}
+\author{Clara Grometto}
+\date{19/04/2026}
+
+%Babel gère les règles de césure et de ponctuation différemment selon la langue. Ces deux lignes font commuter automatiquement la langue à chaque bloc, évitant de le faire manuellement dans chaque edition.
+
+\AtBeginEnvironment{edition}{\selectlanguage{latin}}
+\AtBeginEnvironment{translation}{\selectlanguage{french}}
+
+%pour cet exercice, s'appoyer sur la photographie du CS, sur les facsimilés des deux pages à encoder, ainsi que sur le modèle pdf simplifié
+
+%1. Déclarer les sources avec \DeclareWitness
+% syntaxe : \DeclareWitness{identifiant}{sigle affiché}{nom complet}
+%           [clé=valeur] pour les options
+%L'identifiant (1er argument) est utilisé dans le code LaTeX pour référencer ce manuscrit. Le sigle affiché (2e arg.) est ce qui apparaît imprimé. Le nom complet sert à la liste des témoins.
+
+%compléter : finir d'encoder le Conspectus Siglorum. On omet ici l'encodage des mains successives. Mais on pourrait les mettre dans un \DeclareHand{M1}{M}{M\textsuperscript{1}}[Codicis corrector]
+
+\DeclareWitness{M}{\emph{M}}{Codex Mediceus}
+[origDate={saec. \textsc{v}}]
+\DeclareWitness{}{}{}
+  [origDate={}]
+\DeclareWitness{}{}{}
+  [origDate={}]
+\DeclareWitness{}{}{}
+  [origDate={}]
+
+%2. déclarer un shorthand pour les codex P et R
+%syntaxe : ........
+%ce sont des sources qui sont souvent citées ensemble car elles présentent souvent la même leçon
+
+\DeclareShorthand{}{}{}
+
+\DeclareWitness{a}{\emph{α}}{Codex Mediolanensis biblioth. Ambrosianae, olim Petrarcae} %les id en alphabet latin car c'est trop compliqué de les passer en grec
+  [origDate={saec. \textsc{vxiii-xiv}}]
+\DeclareWitness{c}{\emph{γ}}{Codex Guelferbytanus Gudianus 2\textsuperscript{o}, 70.}
+  [origDate={saec. \textsc{ix}}]
+
+
+%3. Déclarer les sources
+%syntaxe : \DeclareSource{identifiant}{sigle affiché}
+%Les sources sont des textes anciens (commentaires, citations) qui attestent une leçon du texte mais ne sont pas des manuscrits du texte lui-même.
+%compléter : finir de déclarer les sources
+
+\DeclareSource{Serv}{\textsc{Serv.}} %@MV: Servius (4e s. apr.) a commenté les Bucoliques de Virgile (https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0092). Donc pour établir le texte des Buc. de Virg., on consulte aussi ce genre de textes anciens. C'est une source. 
+\DeclareSource{}{} 
+\DeclareSource{}{}
+\DeclareSource{}{} 
+\DeclareSource{}{}
+
+\DeclareSource{Quintil}{\textsc{Quintil.}} %Quintil et Asper ne sont pas recensés dans le CS mais ils pourraient être considérés comme des sources. 
+\DeclareSource{Asper}{\textsc{Asper.}}
+
+\DeclareSource{havet}{\emph{Havet}} %havet est une source contemporaine. On aurait alors un fichier .bib avec toutes les informations bibliographique, et havet serait la clé
+
+\SetLineation{lineation=none,vmodulo} %numérotation toutes les 5 lignes, plus difficile à implémenter pour la version française. 
+
+\DeclareApparatus{default}
+
+\begin{document}
+
+
+%afficher la page de titre
+
+
+%ekdosis organise le texte en blocs synchronisés. Voici comment les comprendre.
+%Voici le schéma à suivre pour les environnements imbriqués
+%\begin{alignment}        zone synchronisée
+
+%\begin{translation}     traduction française
+% ...texte français...
+%\end{translation}
+
+%\begin{edition}         texte latin
+%...texte latin...
+%\end{edition}
+
+%\end{alignment}
+
+%Chaque alignment correspond à un paragraphe : traduction et édition sont alignées ensemble. Si on change de locuteur, on ouvre un nouveau bloc alignment.
+
+
+%Voici les titre : 
+%- ouvrir un environnement alignment 
+%- dans cet environnement placer deux autres environnement translation et edition
+
+\begin{center}\huge\textsc{Virgile}\end{center}
+
+\begin{center}\large\textsc{Bucoliques}\end{center}
+
+\begin{center}\large I\end{center}
+
+
+
+\begin{center}\huge\textsc{P. Vergili Maronis}\end{center}
+
+\begin{center}\large\textsc{Bvcolica}\end{center}
+
+\begin{center}\large I\end{center}
+
+%voici les textes: 
+%- ouvrir un nouvel environnement alignment 
+%- dans cet environnement, ouvrir autant de paires translation et edition que de strophes. 
+%- les vers sont enveloppés d'un environnement ekdverse
+%- encoder l'apparat critique
+
+%%% --- PAR. 1 --- %%%
+
+\begin{center}\textsc{Mélibée}\end{center}
+
+Toi, Tityre, étendu sous le couvert d'un large hêtre, tu essaies un air silvestre sur un mince pipeau; nous autres, nou quittons notre pays et nos chères campagnes; loin du pays nous sommes exilés; toi, Tityre, nonchalant sous l'ombrage, tu apprends aux bois à redire le nom de la belle Amaryllis. 
+
+\begin{center}\textsc{Meliboevs}\end{center}
+
+Tityre, tu patulae recubans sub tegmine fagi\\
+\app{}
+tenui musa meditaris auena~;\\
+nos patriae finis et dulcia linquimus arua~;\\
+nos patriam fugimus~; tu, Tityre, lentus in umbra,\\
+\app{} resonare doces Amaryllida siluas.\\
+
+%%% --- PAR. 2 --- %%%
+
+\begin{center}\textsc{Tityre}\end{center}
+
+O Mélibée, c'est à un dieu que nous devons ces loisirs~; car Il sera pour moi toujours un dieu~; son autel, une tendre victime, un agneau de nos bergeries, souvent l'ensanglantera. Grâce à Lui, mes génisses ont le droit de paître en liberté, comme tu vois, et moi-même celui de jouer mes airs préférés sur un roseau rustique.
+
+\begin{center}\textsc{Tityrvs}\end{center}
+
+O Meliboee, deus nobis haec otia fecit~:\\
+namque erit ille mihi semper deus~; illius aram\\
+saepe tener nostris ab ouilibus imbuet agnus.\\
+Ille meas errare boues, ut cernis, et ipsum\\
+ludere quae uellem calamo permisit agresti.\\
+
+%%% --- PAR. 3 --- %%%
+
+\begin{center}\textsc{Mélibée}\end{center}
+
+Je ne suis point jaloux, mais étonné plutôt~; partout, dans les campagnes, il y a tant de désordre~! Vois~: mes pauvres chèvres, je les pousse, dolent, droit devant moi~; et celle-ci, Tityre, j'ai peine à la tirer~: ici, dans une touffe de coudriers, elle vient de mettre bas deux bessons, espoir du troupeau, hélas~! laissés sur le roc nu.
+
+\begin{center}\textsc{Meliboevs}\end{center}
+
+Non equidem inuideo, miror magis~: undique totis\\
+usque adeo \app{
+} agris~! En ipse capellas\\
+\app{
+} aeger ago~; hanc etiam uix, Tityre, duco~:\\
+hic inter densas corylos modo namque gemellos,\\
+spem gregis, a~! silice in nuda conixa reliquit.\\
+
+\end{document}
+
+
+

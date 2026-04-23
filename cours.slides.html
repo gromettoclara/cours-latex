@@ -8316,7 +8316,7 @@ L'équation~\eqref{eq:einstein}…   % → "(1)" avec parenthèses
 <hr/>
 <ul>
 <li><code>\newline</code> ou <code>\\</code> = Saut de ligne et la ligne suivante n'est pas indentée</li>
-<li><code>clearpage</code>, <code>\newpage</code> ou <code>\pagebreak</code> = Commencer une nouvelle page</li>
+<li><code>\clearpage</code>, <code>\newpage</code> ou <code>\pagebreak</code> = Commencer une nouvelle page</li>
 <li><code>\noindent</code> = Pas d'indentation au début du paragraphe</li>
 <li><code>\par</code> = Nouveau paragraphe (utile pour la déifinition des commandes et des environnements)</li>
 </ul>
@@ -8404,7 +8404,7 @@ L'équation~\eqref{eq:einstein}…   % → "(1)" avec parenthèses
 <p><em>exemple :</em></p>
 <div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[&lt;paramètre de placement&gt;]
 <span class="k">\centering</span>
-<span class="k">\includegraphics</span><span class="na">[scale=1.5]</span><span class="nb">{</span>media/monimage.jpg<span class="nb">}</span>
+<span class="k">\includegraphics</span><span class="na">[width=]</span><span class="nb">{</span>media/monimage.jpg<span class="nb">}</span>
 <span class="k">\caption</span><span class="nb">{</span>&lt;Légende&gt;<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </pre></div>
@@ -8420,7 +8420,7 @@ L'équation~\eqref{eq:einstein}…   % → "(1)" avec parenthèses
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Les-Floats-%F0%9F%9B%9F">Les Floats 🛟<a class="anchor-link" href="#Les-Floats-%F0%9F%9B%9F">¶</a></h2><h3 id="Les-options-de-placement">Les options de placement<a class="anchor-link" href="#Les-options-de-placement">¶</a></h3><ul>
 <li><code>h</code> → À l'emplacement de l'appel au flottant, ou au plus proche pour conserver une mise en page esthétique</li>
-<li><code>t</code> → En hahut d'une page</li>
+<li><code>t</code> → En haut d'une page</li>
 <li><code>b</code> → En bas d'une page</li>
 <li><code>p</code> → Sur une page dédiée aux flottant</li>
 </ul>
@@ -9169,17 +9169,198 @@ PIED    :  \lfoot{gauche}   \cfoot{centre}   \rfoot{droite}
 </div>
 </div>
 </div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9ff6a297">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="LaTeX-pour-l'%C3%A9dition-critique">LaTeX pour l'édition critique<a class="anchor-link" href="#LaTeX-pour-l'%C3%A9dition-critique">¶</a></h1>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=44c77575">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Lire-un-apparat-critique">Lire un apparat critique<a class="anchor-link" href="#Lire-un-apparat-critique">¶</a></h2><p>Apparat positif</p>
+<p><code>&lt;lemme&gt; &lt;manuscrits&gt; : &lt;variantes&gt; &lt;manuscrits&gt;</code></p>
+<p>Apparat négatif</p>
+<p><code>&lt;lemme&gt; ] &lt;variantes&gt; &lt;manuscrits&gt;</code></p>
+<p>Exemple</p>
+<p><code>Tom sort pour acheter une pizza.</code></p>
+<p>➕ « pizza A B C D : piazza E F G »</p>
+<p>➖ « pizza ] piazza E F G »</p>
+<h2 id="Encoder-une-note-critique-avec-Reledmac-et-Reledpar">Encoder une note critique avec <code>Reledmac</code> et <code>Reledpar</code><a class="anchor-link" href="#Encoder-une-note-critique-avec-Reledmac-et-Reledpar">¶</a></h2><p><em>cf.</em> 👩🏻‍💻 Exercice 12</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=336841b6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Deux-(?)-approches-pour-une-%C3%A9dition-critique-num%C3%A9riques">Deux (?) approches pour une édition critique numériques<a class="anchor-link" href="#Deux-(?)-approches-pour-une-%C3%A9dition-critique-num%C3%A9riques">¶</a></h2><div style="display: flex; flex-direction: row; gap: 50px;">
+<div>
+<h4>Imiter la tradition imprimée</h4>
+<div class="highlight"><pre><span></span><span class="nt">&lt;p&gt;</span>
+<span class="nt">&lt;seg</span><span class="w"> </span><span class="na">type=</span><span class="s">"appItem"</span><span class="nt">&gt;</span>1<span class="w"> </span>καί<span class="w"> </span>prep.<span class="w"> </span>Rw<span class="nt">&lt;/seg&gt;</span>
+<span class="nt">&lt;seg</span><span class="w"> </span><span class="na">type=</span><span class="s">"appItem"</span><span class="nt">&gt;</span>ποιούμενος<span class="w"> </span>om.<span class="w"> </span>Pr<span class="nt">&lt;hirend</span><span class="err">="sup"</span><span class="nt">&gt;</span>a<span class="nt">&lt;/hi&gt;&lt;/seg&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+<p>exemple : <a href="https://euripidesscholia.org/Edition/OrestesScholia_all.html">Les Scholies d'Euripide par Donald J. Mastronarde</a></p>
+</div>
+<div>
+<h4>Édition born digital</h4>
+<div class="highlight"><pre><span></span><span class="nt">&lt;app&gt;</span>
+<span class="nt">&lt;lem</span><span class="w"> </span><span class="na">wit=</span><span class="s">"#V #Pra #Prb"</span><span class="nt">&gt;</span>κατασκευήν<span class="nt">&lt;/lem&gt;</span>
+<span class="nt">&lt;rdg</span><span class="w"> </span><span class="na">wit=</span><span class="s">"#Rw"</span><span class="nt">&gt;</span>καί<span class="w"> </span>κατασκευήν<span class="nt">&lt;/rdg&gt;</span>
+<span class="nt">&lt;/app&gt;</span>
+<span class="nt">&lt;app&gt;</span>
+<span class="nt">&lt;lem</span><span class="w"> </span><span class="na">wit=</span><span class="s">"#V #Prb #Rw"</span><span class="nt">&gt;</span>ποιούμενος<span class="nt">&lt;/lem&gt;</span>
+<span class="nt">&lt;rdg</span><span class="w"> </span><span class="na">wit=</span><span class="s">"#Pra"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/app&gt;</span>
+</pre></div>
+<p>exemple : <a href="https://frankensteinvariorum.org/">Le Frankenstein Variorum</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4fca79e5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="%C3%89criture-vs.-saisie-de-donn%C3%A9es">Écriture vs. saisie de données<a class="anchor-link" href="#%C3%89criture-vs.-saisie-de-donn%C3%A9es">¶</a></h2><blockquote>
+<p>[L]e formalisme de la tradition imprimée n’est pas de la même nature que celui de la pratique numérique car les conventions suivies dans les éditions imprimées sont en fait le produit de changements transmis de génération en génération durant plus de trois siècles. La maîtrise de ces conventions s’apparente donc à celle d’une langue pourvue de signes, de termes techniques, de règles et d’ornements de style où le latin occupe la première place. Connaître cette langue, c’est aussi la connaître dans le temps et être en mesure de la suivre à une époque où elle n’était pas codifiée comme elle l’est aujourd’hui par les grandes maisons d’édition. La lecture méthodique de cette langue requiert certes un entraînement particulier, mais elle repose sur l’intelligence humaine et sa faculté d’interpréter naturellement les termes, les signes et l’économie de leur disposition. Et pour la même raison, cette lecture reste inaccessible à une machine. Autrement dit, tandis que les notes critiques des éditions imprimées sont écrites dans une langue suivant une grammaire qui lui est propre, celles des éditions numériques sont saisies dans un code structuré formé d’éléments subordonnés et d’attributs, chacun destiné à recevoir un contenu qui lui est propre. (Alessi 2023)</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=604823f6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Une-troisi%C3%A8me-voix-s'%C3%A9l%C3%A8ve-(cf.-Alessi-2023-%E2%80%93-ekdosis)">Une troisième voix s'élève (<em>cf.</em> Alessi 2023 – <a href="https://www.ekdosis.org/images/ekdosis.pdf"><code>ekdosis</code></a>)<a class="anchor-link" href="#Une-troisi%C3%A8me-voix-s'%C3%A9l%C3%A8ve-(cf.-Alessi-2023-%E2%80%93-ekdosis)">¶</a></h2><ul>
+<li>Pas d’opposition stricte entre édition papier et numérique</li>
+<li>Une complémentarité plutôt qu’une rupture</li>
+<li>L’édition critique traditionnelle porte des subtilités interprétatives difficilement traduisibles en balisage</li>
+<li>Le numérique offre une exploration élargie (variantes, parcours de lecture) mais ne remplace pas la finesse de l’apparat savant</li>
+<li>La proposition de Robert Alessi consiste à partir de LaTeX pour sortir un PDF imprimable et un encodage TEI</li>
+<li>Utiliser LaTeX comme un langage de balisage</li>
+<li>Compiler avec LuaLaTeX</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=403159ca">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Package-et-d%C3%A9clarations-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-Exercice-13">Package et déclarations – 👩🏻‍💻 Exercice 13<a class="anchor-link" href="#Package-et-d%C3%A9clarations-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-Exercice-13">¶</a></h2><p>Appeler <code>Ekdosis</code> avec l'option qui numérote les vers</p>
+<p><code>\usepackage[poetry=verse]{ekdosis}</code></p>
+<p>Déclarer les apparats de note</p>
+<pre><code>\DeclareApparatus{testium}
+\DeclareApparatus{default}
+</code></pre>
+<p>Déclarer les témoins</p>
+<pre><code>\DeclareWitness{M}{\emph{M}}{Codex Mediceus}
+  [origDate={saec. \textsc{v}}]
+</code></pre>
+<p>Ici, <code>H</code> est l'identifiant utilisé dans la sortie TEI, <em>H</em> est le sigle affiché dans l'apparat critique, le troisème argument donne la description complète du manuscrit.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5b49b872">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Saisir-l'apparat-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB">Saisir l'apparat 👩🏻‍💻<a class="anchor-link" href="#Saisir-l'apparat-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB">¶</a></h2><p>Le texte de l'édition se place dans un environnement ekdosis. À chaque endroit où il y a une variante, on insère la commande <code>\app</code>, qui contient le lemme retenu (<code>\lem</code>) et les variantes rejetées (<code>\rdg</code>, de l'anglais reading).</p>
+<div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>ekdosis<span class="nb">}</span>
+Sunt vestrum aliquam multi qui L. Pisonem
+<span class="k">\app</span><span class="nb">{</span>
+  <span class="k">\lem</span><span class="na">[wit={S, D}]</span><span class="nb">{</span>cognorint<span class="nb">}</span>
+  <span class="k">\rdg</span><span class="na">[wit={ψ}]</span><span class="nb">{</span>gnorunt<span class="nb">}</span>
+  <span class="k">\rdg</span><span class="na">[wit={R}]</span><span class="nb">{</span>gonrit<span class="nb">}</span>
+  <span class="k">\rdg</span><span class="na">[wit={π}]</span><span class="nb">{</span>cognoverint<span class="nb">}}</span>,
+huius L. Pisonis, qui praetor fuit, patrem.
+<span class="k">\end</span><span class="nb">{</span>ekdosis<span class="nb">}</span>
+</pre></div>
+<p>Dans cet exemple, la leçon retenue est cognorint, attestée par les témoins S et D. Les trois autres <code>\rdg</code> présentent les variantes des témoins ψ, R et π. ekdosis se charge lui-même de composer l'apparat en bas de page dans la mise en page traditionnelle.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=55e86f0d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Anatomie-d%C3%A9taill%C3%A9e-de-la-commande-%5Capp-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB">Anatomie détaillée de la commande <code>\app</code> 👩🏻‍💻<a class="anchor-link" href="#Anatomie-d%C3%A9taill%C3%A9e-de-la-commande-%5Capp-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB">¶</a></h2><div class="highlight"><pre><span></span><span class="k">\app</span><span class="nb">{</span>
+  <span class="k">\lem</span><span class="na">[wit={P,R,a,c}]</span><span class="nb">{</span>formosam<span class="nb">}</span>
+  <span class="k">\rdg</span><span class="na">[source={Asper}, alt={---onsam}]</span><span class="nb">{</span>formonsam<span class="nb">}</span>
+  <span class="k">\note</span><span class="nb">{</span>(<span class="k">\emph</span><span class="nb">{</span>Append. Seruiana<span class="nb">}</span>)<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+<p><code>\lem</code> pour <code>Lemma</code> : la leçon retenue dans le texte. L'argument <code>wit=</code> ou <code>source=</code> liste les manuscrits ou les sources qui la portent.</p>
+<p><code>\rdg</code> pour <code>Reading</code> : une variante rejetée. <code>source=</code> pour sa source, <code>wit=</code> pour le ms. qui la présente, <code>alt=</code> pour la forme abrégée à afficher (mais il faut la forme complète pour la sortie TEI).
+<code>\note</code> pour une note libre dans l'apparat (référence bibliographique, explications).</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dc7a6518">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Aligner-le-texte-avec-une-traduction-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB">Aligner le texte avec une traduction 👩🏻‍💻<a class="anchor-link" href="#Aligner-le-texte-avec-une-traduction-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB">¶</a></h2><p>Pour présenter le texte et sa traduction sur la même page en deux colonnes, remplacez l'environnement <code>ekdosis</code> par un environnement alignment contenant deux sous-environnements <code>edition</code> et <code>translation</code> (modifiable dans le préambule) :</p>
+<div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>alignment<span class="nb">}</span>[tcols=2, lcols=2]
+<span class="k">\begin</span><span class="nb">{</span>edition<span class="nb">}</span>
+  … texte latin avec <span class="k">\app</span><span class="nb">{}</span> …
+<span class="k">\end</span><span class="nb">{</span>edition<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>translation<span class="nb">}</span>
+  … traduction française …
+<span class="k">\end</span><span class="nb">{</span>translation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>alignment<span class="nb">}</span>
+</pre></div>
+<p>L'option <code>tcols=2</code> indique deux colonnes au total, et <code>lcols=2</code> donne le nombre de colonne, parmi le total, qui s'imprime sur la page de gauche.</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6e891e0b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Bibliographie">Bibliographie<a class="anchor-link" href="#Bibliographie">¶</a></h2><p>Rouquette, Maïeul. 2012. <em>(Xe)LaTeX appliqué aux sciences humaines</em>. Atramenta. <a href="https://shs.hal.science/halshs-00924546">https://shs.hal.science/halshs-00924546</a>.</p>
+<h2 id="Bibliographie">Bibliographie<a class="anchor-link" href="#Bibliographie">¶</a></h2><p>Alessi, Robert. 2021. <em>The ekdosis package. Typesetting TEI-xml compliant Critical Editions.</em> <a href="https://ctan.org/pkg/ekdosis">https://ctan.org/pkg/ekdosis</a>.</p>
+<p>Alessi, Robert, et Marcello Vitali-Rosati, éd. 2023. <em>Éditions critiques numériques: entre tradition et changement de paradigme.</em> Parcours numériques. Presses de l’Université de Montréal. <a href="http://parcoursnumeriques-pum.ca/12-editionscritiques/">http://parcoursnumeriques-pum.ca/12-editionscritiques/</a>.</p>
 <p>Beeton, Berry, et Walden. « TEX: A Branch in Desktop Publishing Evolution, Part 1. » <em>IEEE Annals of the History of Computing</em> vol. 40.3 (2018): 78–93.</p>
-<p>Lozano, Vincent. 2008. <em>Tout ce que vous avez toujours voulu savoir sur LATEX sans jamais oser le demander</em>. In Libro Veritas.</p>
-<p>Karnaj, et ToxicScorpius. 2020. « Introduction à LaTeX ». Text. Zeste de Savoir, Zeste de Savoir, mars 13. <a href="https://zestedesavoir.com/tutoriels/826/introduction-a-latex/">https://zestedesavoir.com/tutoriels/826/introduction-a-latex/</a>.</p>
 <p>Chevalier, Céline, et Collectif. 2009. <em>LaTeX pour l’impatient</em>. H&amp;K.</p>
+<p>Karnaj, et ToxicScorpius. 2020. « Introduction à LaTeX ». Text. Zeste de Savoir, Zeste de Savoir, mars 13. <a href="https://zestedesavoir.com/tutoriels/826/introduction-a-latex/">https://zestedesavoir.com/tutoriels/826/introduction-a-latex/</a>.</p>
+<p>Lozano, Vincent. 2008. <em>Tout ce que vous avez toujours voulu savoir sur LATEX sans jamais oser le demander</em>. In Libro Veritas.</p>
+<p>Rouquette, Maïeul. 2012. <em>(Xe)LaTeX appliqué aux sciences humaines</em>. Atramenta. <a href="https://shs.hal.science/halshs-00924546">https://shs.hal.science/halshs-00924546</a>.</p>
 </div>
 </div>
 </div>
