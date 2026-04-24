@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt,twoside, titlepage]{book}
-\usepackage[latin,french]{babel}
+\usepackage[greek,latin,french]{babel}
 
 \usepackage{fontspec}
 \defaultfontfeatures[Old Standard]{%utiliser oldstandard pour imprimer le grec
@@ -48,8 +48,8 @@ apparatus=edition
 \DeclareWitness{}{}{}
   [origDate={}]
 
-%2. déclarer un shorthand pour les codex P et R
-%syntaxe : ........
+%2. déclarer un shorthand pour les codex P et R, qui sont les codex principaux, il suffit d'afficher codd. en italique
+%syntaxe : \DeclareShorthand{identifiant}{texte à afficher}{témoins désignés}
 %ce sont des sources qui sont souvent citées ensemble car elles présentent souvent la même leçon
 
 \DeclareShorthand{}{}{}
@@ -65,7 +65,7 @@ apparatus=edition
 %Les sources sont des textes anciens (commentaires, citations) qui attestent une leçon du texte mais ne sont pas des manuscrits du texte lui-même.
 %compléter : finir de déclarer les sources
 
-\DeclareSource{Serv}{\textsc{Serv.}} %@MV: Servius (4e s. apr.) a commenté les Bucoliques de Virgile (https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0092). Donc pour établir le texte des Buc. de Virg., on consulte aussi ce genre de textes anciens. C'est une source. 
+\DeclareSource{Serv}{\textsc{Serv.}} %@Servius (4e s. apr.) a commenté les Bucoliques de Virgile (https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0092). Donc pour établir le texte des Buc. de Virg., on consulte aussi ce genre de textes anciens. C'est une source. 
 \DeclareSource{}{} 
 \DeclareSource{}{}
 \DeclareSource{}{} 

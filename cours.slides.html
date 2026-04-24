@@ -7988,20 +7988,20 @@ corps du texte
 <div style="height: 70vh; overflow-y: auto; padding-right: 10px; padding-bottom: 10px">
 <h2 id="Les-listes-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-exercice-4">Les listes – 👩🏻‍💻 exercice 4<a class="anchor-link" href="#Les-listes-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-exercice-4">¶</a></h2><p>LaTeX propose trois environnement :</p>
 <p><code>itemize</code> — liste à puces</p>
-<pre><code>latex\begin{itemize}
+<pre><code>\begin{itemize}
   \item Premier élément
   \item Deuxième élément
 \end{itemize}
 </code></pre>
 <p><code>enumerate</code> — liste numérotée</p>
-<pre><code>latex\begin{enumerate}
+<pre><code>\begin{enumerate}
   \item Première étape
   \item Deuxième étape
 \end{enumerate}
 </code></pre>
 <p><code>description</code> — liste de définitions. On place entre crochets après <code>\item</code>
 le terme à mettre en gras</p>
-<pre><code>latex\begin{description}
+<pre><code>\begin{description}
   \item[Terme] Définition du terme.
   \item[Autre mot] Sa description ici.
 \end{description}
@@ -8021,8 +8021,8 @@ le terme à mettre en gras</p>
 <div style="height: 70vh; overflow-y: auto; padding-right: 10px; padding-bottom: 10px">
 <h2 id="Les-citations">Les citations<a class="anchor-link" href="#Les-citations">¶</a></h2><p>Les <code>guillemets</code></p>
 <pre><code>``Texte entre guillemets anglais''   % "Texte entre guillemets anglais"
-\og Texte entre guillemets français \fg{}  % « Texte... » (avec package babel/frenchb)
-\enquote{Cette commande permet de faire des \enquote{citations imbriquées}} %  Cette commande permet de faire des “citations imbriquées”. » (avec package csquote)
+\og Texte entre guillemets français \fg{}  % « Texte... » (avec package babel/french)
+\enquote{Cette commande permet de faire des \enquote{citations imbriquées}} % « Cette commande permet de faire des “citations imbriquées”. » (avec package csquote)
 </code></pre>
 <p><code>quote</code> — pour une citation courte, sans indentation de première ligne</p>
 <pre><code>\begin{quote}
@@ -8100,14 +8100,14 @@ le terme à mettre en gras</p>
 <div style="height: 70vh; overflow-y: auto; padding-right: 10px; padding-bottom: 10px">
 <h2 id="R%C3%A9f%C3%A9rences-crois%C3%A9es-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-exercice-6">Références croisées – 👩🏻‍💻 exercice 6<a class="anchor-link" href="#R%C3%A9f%C3%A9rences-crois%C3%A9es-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-exercice-6">¶</a></h2><p>Référencer une section</p>
 <pre><code>latex\section{Mon titre}
-\label{sec:montitle}   % juste après \section
+\label{sec:montitre}   % juste après \section
 
-Voir la section~\ref{sec:montitle}.     % → "section 2"
-Voir~\nameref{sec:montitle}.            % → "Mon titre" (avec hyperref)
-Voir~\cref{sec:montitle}.              % → "section 2" (avec cleveref)
+Voir la section~\ref{sec:montitre}.     % → "section 2"
+Voir~\nameref{sec:montitre}.            % → "Mon titre" (avec hyperref)
+Voir~\cref{sec:montitre}.              % → "section 2" (avec cleveref)
 </code></pre>
 <p>Référencer une figure</p>
-<pre><code>latex\begin{figure}
+<pre><code>\begin{figure}
   \centering
   \includegraphics{image.png}
   \caption{Légende.}
@@ -8117,7 +8117,7 @@ Voir~\cref{sec:montitle}.              % → "section 2" (avec cleveref)
 La figure~\ref{fig:monimage} montre…   % → "La figure 1.5"
 </code></pre>
 <p>Référencer une équation</p>
-<pre><code>latex\begin{equation}
+<pre><code>\begin{equation}
   E = mc^{2}
   \label{eq:einstein}
 \end{equation}
@@ -8376,7 +8376,7 @@ L'équation~\eqref{eq:einstein}…   % → "(1)" avec parenthèses
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Les-images">Les images<a class="anchor-link" href="#Les-images">¶</a></h2><ul>
 <li>Dans le préambule : <code>\usepackage{graphicx}</code></li>
-<li>La commande : <code>\includegraphics[chemin/vers/mon/image.png]</code>, dont les options utiles sont :<ul>
+<li>La commande : <code>\includegraphics{chemin/vers/mon/image.png}</code>, dont les options utiles sont :<ul>
 <li><code>width</code> / <code>height</code> = valeur en cm ou px</li>
 <li><code>scale</code> = proportion sans unité</li>
 </ul>
@@ -8427,8 +8427,7 @@ L'équation~\eqref{eq:einstein}…   % → "(1)" avec parenthèses
 <h3 id="Contraindre-la-position">Contraindre la position<a class="anchor-link" href="#Contraindre-la-position">¶</a></h3><ul>
 <li>option <code>[h!]</code></li>
 <li><code>\usepackage{float}</code> + option <code>[H]</code></li>
-<li><code>\usepackage{placeins}</code> + \FloatBarrier (Toﬀs les oants appelés aﬁant la commande sont placés aﬁant
-celle-ci)</li>
+<li><code>\usepackage{placeins}</code> + <code>\FloatBarrier</code> (Tous les flottants appelés avant la commande sont placés avant celle-ci)</li>
 </ul>
 </div>
 </div>
@@ -8452,7 +8451,7 @@ celle-ci)</li>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Astuce-:-la-minipage">Astuce : la minipage<a class="anchor-link" href="#Astuce-:-la-minipage">¶</a></h2><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>minipage<span class="nb">}{</span>0.45<span class="k">\textwidth</span><span class="nb">}</span>
-  <span class="k">\includegraphics</span><span class="na">[width=\linewidth]</span><span class="nb">{</span>image.png<span class="nb">}</span>
+  <span class="k">\includegraphics</span><span class="na">[width=\linewidth]</span><span class="nb">{</span>image.jpg<span class="nb">}</span>
   <span class="k">\caption</span><span class="nb">{</span>Ma légende<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>minipage<span class="nb">}</span>
 <span class="k">\hfill</span>
@@ -9180,6 +9179,19 @@ PIED    :  \lfoot{gauche}   \cfoot{centre}   \rfoot{droite}
 </div>
 </div>
 </div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b7c0644e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<figure style="display: flex; align-items: center; justify-content: center;">
+<img alt="logo" src="media/testivar.png" style="width: auto; height: 500px;"/>
+</figure>
+</div>
+</div>
+</div>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=44c77575">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9271,17 +9283,28 @@ PIED    :  \lfoot{gauche}   \cfoot{centre}   \rfoot{droite}
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Package-et-d%C3%A9clarations-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-Exercice-13">Package et déclarations – 👩🏻‍💻 Exercice 13<a class="anchor-link" href="#Package-et-d%C3%A9clarations-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-Exercice-13">¶</a></h2><p>Appeler <code>Ekdosis</code> avec l'option qui numérote les vers</p>
-<p><code>\usepackage[poetry=verse]{ekdosis}</code></p>
-<p>Déclarer les apparats de note</p>
-<pre><code>\DeclareApparatus{testium}
+<h2 id="Package-et-d%C3%A9clarations-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-Exercice-13">Package et déclarations – 👩🏻‍💻 Exercice 13<a class="anchor-link" href="#Package-et-d%C3%A9clarations-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-Exercice-13">¶</a></h2><h3 id="Appeler-Ekdosis-avec-l'option-qui-num%C3%A9rote-les-vers">Appeler <code>Ekdosis</code> avec l'option qui numérote les vers<a class="anchor-link" href="#Appeler-Ekdosis-avec-l'option-qui-num%C3%A9rote-les-vers">¶</a></h3><p><code>\usepackage[poetry=verse]{ekdosis}</code></p>
+<h3 id="D%C3%A9clarer-les-apparats-de-note">Déclarer les apparats de note<a class="anchor-link" href="#D%C3%A9clarer-les-apparats-de-note">¶</a></h3><pre><code>\DeclareApparatus{testium}
 \DeclareApparatus{default}
 </code></pre>
-<p>Déclarer les témoins</p>
-<pre><code>\DeclareWitness{M}{\emph{M}}{Codex Mediceus}
+<h3 id="D%C3%A9clarer-les-t%C3%A9moins">Déclarer les témoins<a class="anchor-link" href="#D%C3%A9clarer-les-t%C3%A9moins">¶</a></h3><pre><code>\DeclareWitness{M}{\emph{M}}{Codex Mediceus}
   [origDate={saec. \textsc{v}}]
 </code></pre>
 <p>Ici, <code>H</code> est l'identifiant utilisé dans la sortie TEI, <em>H</em> est le sigle affiché dans l'apparat critique, le troisème argument donne la description complète du manuscrit.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=332bb549">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Package-et-d%C3%A9clarations-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-Exercice-13">Package et déclarations – 👩🏻‍💻 Exercice 13<a class="anchor-link" href="#Package-et-d%C3%A9clarations-%E2%80%93-%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-Exercice-13">¶</a></h2><h3 id="D%C3%A9clarer-les-sources">Déclarer les sources<a class="anchor-link" href="#D%C3%A9clarer-les-sources">¶</a></h3><p>Une source secondaire est un document qui ne transmet pas directement le texte original, mais qui en dépend ou en dérive.</p>
+<p><code>\DeclareSource{identifiant}{sigle affiché}</code></p>
+<h3 id="D%C3%A9clarer-un-Shorthand">Déclarer un <code>Shorthand</code><a class="anchor-link" href="#D%C3%A9clarer-un-Shorthand">¶</a></h3><p>Le shorthand (ou système d’abréviations critiques) désigne un ensemble de sigles ou notations abrégées utilisés par les éditeurs pour référencer rapidement des sources, des manuscrits ou des variantes dans l’apparat critique.</p>
+<p><code>\DeclareShorthand{identifiant}{texte à afficher}{témoins désignés}</code></p>
 </div>
 </div>
 </div>
@@ -9321,8 +9344,8 @@ huius L. Pisonis, qui praetor fuit, patrem.
 <span class="nb">}</span>
 </pre></div>
 <p><code>\lem</code> pour <code>Lemma</code> : la leçon retenue dans le texte. L'argument <code>wit=</code> ou <code>source=</code> liste les manuscrits ou les sources qui la portent.</p>
-<p><code>\rdg</code> pour <code>Reading</code> : une variante rejetée. <code>source=</code> pour sa source, <code>wit=</code> pour le ms. qui la présente, <code>alt=</code> pour la forme abrégée à afficher (mais il faut la forme complète pour la sortie TEI).
-<code>\note</code> pour une note libre dans l'apparat (référence bibliographique, explications).</p>
+<p><code>\rdg</code> pour <code>Reading</code> : une variante rejetée. <code>source=</code> pour sa source, <code>wit=</code> pour le ms. qui la présente, <code>alt=</code> pour la forme abrégée à afficher (mais il faut la forme complète pour la sortie TEI).</p>
+<p><code>\note</code> pour une note libre dans l'apparat (référence bibliographique, explications).</p>
 </div>
 </div>
 </div>
