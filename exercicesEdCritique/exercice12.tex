@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+
+\usepackage{reledmac}%Faire une édition critique
+\usepackage{reledpar}%Mettre deux textes en vis-à-vis
+
+\begin{document}
+	
+%Numérotez les lignes en enlevant les commentaires de \beginnumbering, \pstart, \pend et \endnumbering sur la partie en ancien français
+%Décommentez les notes pour ajouter l'apparat de notes
+%Décomentez les commentaires de \beginnumbering, \pstart, \pend et \endnumbering sur la partie en français moderne pour imprimer la traduction
+%Mettez le texte dans un environnement Leftside (attention à la majuscule), et sa traduction (décommentée) dans un environnement Rightside; puis mettre tout ça dans un environnement pages, et ajoutez après la fermeture de cet environnement la commande \Pages
+%Transformez pages en pairs, et \Pages en \Columns
+
+	%\beginnumbering
+
+	 %\pstart	 
+
+Rollant est proz e Oliver est sage : %\edtext{Ambedui}{\Afootnote{entrambi \textit{ms.} de Venise}}
+ambedui unt merveillus vasselage ; Puis que il sunt a cheval e as armes, ja pur murir n'eschiverunt bataille.
+
+%\pend
+%\pstart
+Bon sunt li cunte e lur paroles haltes. Felun paien par grant irur chevalchent.
+%\edtext{Dist Oliver : « Rollant, veez en alques !}{\Afootnote{{omit.} \textit{ms.} de Châteauroux}}
+Dist Oliver : « Rollant, veez en alques ! Cist nus sunt pres, mais trop nus est loinz Carles. Soner tun olifan, si l'orrat li reis. »
+%\pend
+%\pstart
+
+Rollant respunt : « Jo fereie que fols ! En dulce France en perdreie mun los. Sempres ferrai de Durendal granz colps.
+Sempres ferrai de Durendal granz colps : sanglant en ert li branz entresqu'a l'or. Felun paien mar i vindrent as porz : jo vos plevis, tuz sunt jugez a mort. »
+%\pend
+%\endnumbering
+
+
+%Ici se trouve la traduction moderne (prose, d'après J. Dufournet, 1993)
+
+%\begin{Rightside}
+%\beginnumbering
+
+%\pstart
+
+
+Roland est vaillant et Olivier est sage : tous deux font preuve d'une bravoure admirable ; dès lors qu'ils sont à cheval et en armes, jamais, dussent-ils en mourir, ils ne fuiront la bataille.
+
+%\pend
+
+%\pstart
+Les deux comtes sont excellents, et leurs paroles sont fières. Les païens félons chevauchent avec une grande fureur. Olivier dit : « Roland, regarde un peu ! Ils sont proches de nous, mais Charles est trop loin. Sonne ton olifant, et le roi t'entendra. »
+%\pend
+
+%\pstart
+Roland répond : « Ce serait agir en insensé ! En douce France j'en perdrais ma renommée. À l'instant je frapperai de Durendal de grands coups : la lame en sera ensanglantée jusqu'à l'or. Les félons païens ont eu tort de venir aux défilés : je vous le jure, ils sont tous condamnés à mort. »
+%\pend
+
+%\endnumbering
+
+
+
+
+
+
+
+\end{document}
