@@ -1,0 +1,76 @@
+\documentclass[a4paper, 12pt, french]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{csquotes}
+
+\title{Un espèce de Grenouille vénéneuse}
+\author{Clara Grometto}
+\date{2026-04-01}
+
+\begin{document}
+
+\maketitle
+
+%une épigraphe en tout petit et alignée à droite
+\begin{flushright}
+\tiny À tous les crapauds, on ne vous oublie pas\ldots 
+\end{flushright}
+
+%résumé
+\begin{abstract}
+    \textbf{résumé}~: Le dendrobate est une petite grenouille arboricole vivant dans les forêts tropicales humides d'Amérique du sud. Vivement colorée, elle exprime ainsi sa toxicité face aux prédateurs. Ce signal visuel est une stratégie d'adaptation à son environnement très efficace : on parle d'aposématisme. Le dendrobate à tapirer possède différentes formes appelées « morphes » et la majorité d'entre eux ont une couleur à dominance jaune et noire. La sous-espèce « azureus », ou dendrobate bleu, se démarque toutefois avec une incroyable couleur bleue.
+\end{abstract}
+
+%Il y a deux manières de ne pas numéroter les sections. La mani-re suivante ou en rajoutant \setcounter{secnumdepth}{0}. Ça garde les sections non numérotées mais automatiquement dans la table des matières.
+\section*{Introduction en \href{https://lorembarnak.com/}{loremtabarnak}}
+\addcontentsline{toc}{section}{Introduction en loremtabarnak}
+
+Crime de taboire de doux Jésus de ciboire d'étole de calvaire de saint-ciboire de câline de bine de verrat de mautadine de géritole de sacrament de charrue d'estique de cibolac de saint-sacrament de gériboire de purée de tabarnak de mosus de sacréfice de cochonnerie de bâtard de baptême de mangeux d'marde de boswell de charogne de calvince de bout d'viarge de calvinouche de christie de batince de colon de mautadit de marde de viande à chien de sacristi de tabarouette de cul de sainte-viarge, comme le montre la figure \ref{fig:frog}. 
+
+%les images doivent être insérées sur une page dédiée
+\begin{figure}[p!]
+\centering
+\includegraphics[width=10cm]{./image.jpg}
+\caption{La Dendrobate à tapirer}
+\label{fig:frog}
+\end{figure}
+
+\section*{Une section en lorem ipsum}
+\addcontentsline{toc}{section}{Une section en lorem ipsum}
+
+\lipsum[1-7]
+
+\section*{La même, mais avec une citation issue de \href{https://fr.wikipedia.org/wiki/Dendrobatidae}{Wikipedia}}
+\addcontentsline{toc}{section}{La même, mais avec une citation issue de Wikipedia}
+
+\lipsum[1-4]
+
+\begin{quotation}
+    \enquote{Les Dendrobatidae sont un exemple d'organisme aposématique. Leur coloration vive annonce leur inappétence pour les prédateurs potentiels. On pense que l'aposématisme est apparu au moins quatre fois au sein de la famille des Dendrobatidae selon les arbres phylogénétiques, et ces grenouilles ont depuis subi des divergences spectaculaires - à la fois interspécifiques et intraspécifiques - dans leur coloration. Ceci est surprenant étant donné que ce type de mécanisme de défense dépend de la fréquence à laquelle ces animaux sont présents.}
+\end{quotation}
+
+\lipsum[5-7]
+
+\section*{Avertissement}
+\addcontentsline{toc}{section}{avertissement}
+
+\begin{tcolorbox}[colback=blue!80!black,
+                  colframe=yellow,
+                  coltext=white,
+                  center,
+                  width=0.6\textwidth]
+\centering Attention vénéneux !
+\end{tcolorbox}
+
+\listoffigures
+\tableofcontents
+
+\end{document}
+

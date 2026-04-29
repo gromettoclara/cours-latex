@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+\begin{document}
+
+% ---- liste imbriquée ----
+Les pieuvres sont des créatures d'une intelligence déconcertante.
+\begin{itemize}
+\item elles peuvent ouvrir un bocal fermé depuis l'intérieur ;
+\item elles utilisent des outils :
+	\begin{enumerate}
+	\item transporter des coquilles de noix de coco pour s'abriter
+	\item empiler des rochers pour barricader leur tanière
+	\end{enumerate}
+\item elles reconnaissent les visages humains individuellement.
+\end{itemize}
+Aucun vertébré n'a le monopole de l'ingéniosité.
+
+% ---- liste avec des carrés ----
+Avant de partir en randonnée, je prends~:
+\begin{itemize}[label=$\square$]
+\item carte et boussole ;
+\item trousse de premiers secours ;
+\item ration de secours (barres énergétiques, fruits secs).
+\end{itemize}
+La documentation du package enumitem, qui permet de
+personnaliser ces marqueurs, est disponible sur
+\url{https://ctan.org/pkg/enumitem}. Je veux ici une liste qui prend le carré comme puce.
+
+% ---- liste avec alpha ----
+Plan du chapitre sur la première guerre mondiale~:
+\begin{enumerate}[label=\Alph*)]
+\item L’entrée en guerre et la formation des fronts ;
+\item Les opérations sur le front Ouest en 1915 et en 1916 ;
+\item La guerre totale ;
+\end{enumerate}
+
+% ---- liste en deux parties (avec resume) ----
+Recette de la tarte aux pommes~:
+\begin{enumerate}[label=\arabic*)]
+\item mélanger la farine, le beurre froid et une pincée de sel ;
+\item ajouter un peu d'eau froide et former une boule sans trop pétrir ;
+\item laisser reposer la pâte au réfrigérateur pendant trente minutes.
+\end{enumerate}
+Pendant ce temps, on prépare la garniture~:
+\begin{enumerate}[label=\arabic*),resume]
+\item éplucher les pommes, les couper en fines lamelles ;
+\item les disposer en rosace sur le fond de tarte précuit.
+\end{enumerate}
+
+\end{document}

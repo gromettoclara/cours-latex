@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+
+% --- Packages ajoutés pour la correction ---
+\usepackage{csquotes}       % guillemets et citations imbriquées
+\usepackage{hyperref}       % hyperliens (\url, \href)
+\usepackage{verse}          % environnement verse avec indentation
+
+\begin{document}
+
+% ============================================================
+\section{csquotes}
+% ============================================================
+
+% \enquote{} pose les guillemets du niveau courant.
+% Imbriqué, il passe automatiquement aux guillemets intérieurs.
+
+Victor Hugo a écrit dans la \emph{Préface de Cromwell} :
+\enquote{C'est par là qu'ils touchent à l'humanité, c'est par là
+qu'ils sont dramatiques. \enquote{Du sublime au ridicule il n'y a
+qu'un pas}, disait Napoléon, quand il fut convaincu d'être homme.}
+
+
+% ============================================================
+\section{quote}
+% ============================================================
+
+% Environnement `quote` : citation courte, un seul paragraphe,
+% marges réduites des deux côtés.
+%
+% \textelp{}  : points de suspension entre crochets […]
+% \textins{}  : insertion entre crochets [commentaire]
+% Les deux commandes viennent du package csquotes.
+
+Victor Hugo présente ainsi le public d'une pièce de théâtre :
+
+\begin{quote}
+Trois espèces de spectateurs composent ce qu'on est convenu
+d'appeler le public : premièrement, les femmes ; deuxièmement,
+les penseurs ; troisièmement, la foule proprement dite. Ce que
+la foule demande presque exclusivement à l'œuvre dramatique,
+c'est de l'action ; ce que les femmes y veulent avant tout,
+c'est de la passion ; ce qu'y cherchent plus spécialement les
+penseurs, ce sont des caractères.
+\textelp{} \textins{c'est le rôle du dramaturge de satisfaire
+ces trois publics}\footnote{Dans la \emph{Préface de Ruy Blas}.}
+\end{quote}
+
+
+% ============================================================
+\section{quotation}
+% ============================================================
+
+% Environnement `quotation` : citation longue sur plusieurs
+% paragraphes. Contrairement à `quote`, les paragraphes sont
+% indentés à la première ligne.
+
+\begin{quotation}
+Homère, en effet, domine la société antique. Dans cette société,
+tout est simple, tout est épique. La poésie est religion, la
+religion est loi. À la virginité du premier âge a succédé la
+chasteté du second. Une sorte de gravité solennelle s'est
+empreinte partout, dans les mœurs domestiques comme dans les
+mœurs publiques. Les peuples n'ont conservé de la vie errante
+que le respect de l'étranger et du voyageur. La famille a une
+patrie ; tout l'y attache ; il y a le culte du foyer, le culte
+des tombeaux.
+
+Nous le répétons, l'expression d'une pareille civilisation ne
+peut être que l'épopée. L'épopée y prendra plusieurs formes,
+mais ne perdra jamais son caractère. Pindare est plus sacerdotal
+que patriarchal, plus épique que lyrique. Si les annalistes,
+contemporains nécessaires de ce second âge du monde, se mettent
+à recueillir les traditions et commencent à compter avec les
+siècles, ils ont beau faire, la chronologie ne peut chasser la
+poésie ; l'histoire reste épopée. Hérode est un Homère.
+
+\raggedleft(Victor Hugo, \emph{Cromwell}, Préface)
+\end{quotation}
+
+
+% ============================================================
+\section{url}
+% ============================================================
+
+% \url{}    : lien cliquable affiché tel quel (police machine)
+% \href{}{} : lien cliquable avec texte personnalisé
+
+Pour avoir le texte complet, suivez le lien :
+\url{https://fr.wikisource.org/wiki/Cromwell_-_Préface}
+
+% Variante avec texte personnalisé :
+% \href{https://fr.wikisource.org/wiki/Cromwell_-_Préface}{Préface de Cromwell sur Wikisource}
+
+
+% ============================================================
+\section{verse}
+% ============================================================
+
+% Environnement `verse` (package verse) :
+%   - \\ termine un vers
+%   - \> indente d'une unité (pour les vers 3 et 4)
+%   - bonus : \settowidth\versewidth{} centre le bloc sur le vers le plus long
+
+Amusons-nous un peu avec Edward \textsc{Lear},
+\emph{The Owl and the Pussy Cat, and Other Nonsense Poetry}.
+
+\settowidth\versewidth{Fell casually into a kettle}
+\begin{verse}[\versewidth]
+There was an old man who when little \\
+Fell casually into a kettle \\
+\> But, growing too stout, \\
+\> He could never get out, \\
+So he passed all his life in that kettle
+\end{verse}
+
+\end{document}

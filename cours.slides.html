@@ -8022,14 +8022,14 @@ le terme à mettre en gras</p>
 <h2 id="Les-citations">Les citations<a class="anchor-link" href="#Les-citations">¶</a></h2><p>Les <code>guillemets</code></p>
 <pre><code>``Texte entre guillemets anglais''   % "Texte entre guillemets anglais"
 \og Texte entre guillemets français \fg{}  % « Texte... » (avec package babel/french)
-\enquote{Cette commande permet de faire des \enquote{citations imbriquées}} % « Cette commande permet de faire des “citations imbriquées”. » (avec package csquote)
+\enquote{Cette commande permet de faire des \enquote{citations imbriquées}} % « Cette commande permet de faire des “citations imbriquées”. » (avec package csquotes)
 </code></pre>
 <p><code>quote</code> — pour une citation courte, sans indentation de première ligne</p>
 <pre><code>\begin{quote}
   Ceci est une courte citation.
 \end{quote}
 </code></pre>
-<p><em>NB</em> : Avec le package csquote, on peut aussi mettre les points de suspension entre crochets (<code>\textelp{}</code>) et insérer des commentaires entre crochets (<code>\textins{commentaire}</code>).</p>
+<p><em>NB</em> : Avec le package csquotes, on peut aussi mettre les points de suspension entre crochets (<code>\textelp{}</code>) et insérer des commentaires entre crochets (<code>\textins{commentaire}</code>).</p>
 <p><code>quotation</code> — pour une citation longue sur plusieurs paragraphes. Ajoute une indentation de première ligne à chaque paragraphe.</p>
 <pre><code>\begin{quotation}
   Premier paragraphe de la citation.
@@ -8047,6 +8047,7 @@ le terme à mettre en gras</p>
   Et sa suite ici.
 \end{verse}
 </code></pre>
+<p>Penser à charger le package <code>verse</code>.</p>
 </div>
 </div>
 </div>
@@ -8072,7 +8073,7 @@ le terme à mettre en gras</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Les-liens-%E2%80%93-rendre-le-lien-cliquable">Les liens – rendre le lien cliquable<a class="anchor-link" href="#Les-liens-%E2%80%93-rendre-le-lien-cliquable">¶</a></h2><ul>
+<h2 id="Les-liens-%E2%80%93-rendre-le-lien-cliquable-avec-le-package-hyperref">Les liens – rendre le lien cliquable avec le package <code>hyperref</code><a class="anchor-link" href="#Les-liens-%E2%80%93-rendre-le-lien-cliquable-avec-le-package-hyperref">¶</a></h2><ul>
 <li><code>\url{}</code> pour un lien cliquable affiché tel quel (police monotype)</li>
 <li><code>\href{lien}{texte}</code> pour un lien cliquable avec texte personnalisé</li>
 </ul>
@@ -8104,6 +8105,7 @@ le terme à mettre en gras</p>
 
 Voir la section~\ref{sec:montitre}.     % → "section 2"
 Voir~\nameref{sec:montitre}.            % → "Mon titre" (avec hyperref)
+Voir le chapitre à la page~\pageref{sec:montitre}.    % → "le chapitre à la page 4" (avec hyperref)
 Voir~\cref{sec:montitre}.              % → "section 2" (avec cleveref)
 </code></pre>
 <p>Référencer une figure</p>
@@ -8656,7 +8658,7 @@ Genette, Gérard. <em>Figures III</em>. Paris: Éditions du Seuil, 1972.</p>
 <li>créer des sous-sections à la bibliographie :</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="k">\printbibliography</span><span class="na">[keyword={sources-primaires}, title={Sources Primaires}]</span>
-<span class="k">\printbibliography</span><span class="na">[notkeyword={sources-primaires}, title={Sources Primaires}]</span>
+<span class="k">\printbibliography</span><span class="na">[notkeyword={sources-secondaires}, title={Sources Secondaires}]</span>
 </pre></div>
 <hr/>
 <h3 id="%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-L%E2%80%99exercice-8-pr%C3%A9sente-une-m%C3%A9thode-plus-%C3%A9labor%C3%A9e.">👩🏻‍💻 L’exercice 8 présente une méthode plus élaborée.<a class="anchor-link" href="#%F0%9F%91%A9%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB-L%E2%80%99exercice-8-pr%C3%A9sente-une-m%C3%A9thode-plus-%C3%A9labor%C3%A9e.">¶</a></h3><ol>
