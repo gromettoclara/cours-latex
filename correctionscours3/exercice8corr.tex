@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+
+\usepackage[citestyle=authoryear, bibstyle=authoryear]{biblatex}
+
+\nocite{*}
+\addbibresource{bibliographie.bib}%Mettre le chemin de sa bibliographie (fichier .bib)
+
+\defbibheading{openformat}{\subsection*{Formats libres et ouverts}}
+\defbibheading{editorialisation}{\subsection*{Éditorialisation}}
+\defbibheading{tei}{\subsection*{La Text Encoding Initiative}}
+\defbibheading{minimalcomputing}{\subsection*{Minimal computing}}
+
+\usepackage{csquotes}%nécessaire pour utiliser le style bibliographique, qui utilise enquote
+
+
+\begin{document}
+ 
+You call this cat food chase mice cat not kitten around waffles i see a bird i stare at it i meow at it i do a wiggle come here birdy wake up human for food at 4am purr like a car engine oh yes, there is my human slave woman she does best pats ever that all i like about her hiss meow \cite{berginOriginsWordProcessing2006}. Ask for petting put toy mouse in food bowl run out of litter box at full speed \cite[p.~5]{fauchie_markdown_2018}. I like big cats and i can not lie one of these days i'm going to get that red dot, just you wait and see \cite[voir aussi][p.~12]{dombrowskiMinimizingComputingMaximizes2022}. Meoooow sleeps on my head.\footcite{burnard_quest-ce_2015} Scratch the furniture plays league of legends but sniff sniff.\footcite[p.~3]{vitali_rosati_quest-ce_2016}
+ 
+Annoy owner until he gives you food say meow repeatedly until belly rubs, feels good \cite{risam_introduction_2022}. Try to jump onto window and fall while scratching at wall lie in the sink all day poop in a handbag look delicious and drink the soapy mopping up water then puke giant foamy fur-balls but my slave human didn't give me any food so i pooped on the floor \cite[p.~78]{beeton_tex_2018}, yet rub butt on table prance along on top of the garden fence, annoy the neighbor's dog and make it bark. \textcite{dehut_en_2018} cuddle no cuddle cuddle love scratch scratch warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats but adventure always, human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! for sit and stare so i dreamt about fish yum! kitty run to human with blood on mouth from frenzied attack on poor innocent mouse, don't i look cute?. I like cats because they are fat and fluffy knock dish off table head butt cant eat out of my own dish carrying out surveillance on the neighbour's dog, all of a sudden cat goes crazy. \textcite[p.~56]{foxHackingCultureNot2015} mrow meow all night ptracy hate dogs meow love me! cat playing a fiddle in hey diddle diddle?.
+
+\section*{Bibliographie}
+\printbibliography[heading=openformat, keyword={openformat}]
+\printbibliography[heading=editorialisation, keyword={editorialisation}]
+\printbibliography[heading=tei, keyword={TEI}]
+\printbibliography[heading=minimalcomputing, keyword={minimalcomputing}]
+
+
+
+\end{document}

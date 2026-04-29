@@ -1,0 +1,183 @@
+\documentclass[a4paper,12pt,twoside, titlepage]{book}
+\usepackage[latin,french]{babel}
+
+\usepackage{fontspec}
+\defaultfontfeatures[Old Standard]{%utiliser oldstandard pour imprimer le grec
+Extension = .otf, 
+UprightFont = OldStandard-Regular,  
+ItalicFont = OldStandard-Italic,  
+BoldFont = OldStandard-Bold,  
+BoldItalicFont = OldStandard-BoldItalic,  
+SlantedFont = OldStandard-Regular,
+SlantedFeatures = {FakeSlant=0.25},
+BoldSlantedFont = OldStandard-Bold,
+BoldSlantedFeatures = {FakeSlant=0.25}
+}
+\setmainfont{Old Standard}
+\usepackage[poetry=verse]{ekdosis}
+
+\SetAlignment{
+texts=translation;edition,
+apparatus=edition
+}
+
+\title{exercice Ekdosis}
+\author{Clara Grometto}
+\date{19/04/2026}
+
+\AtBeginEnvironment{edition}{\selectlanguage{latin}} %important pour la ponctuation et les hyphénations. En théorie, combiné à Babel, on pourrait enlever les ~ pour les espaces insécables
+\AtBeginEnvironment{translation}{\selectlanguage{french}}
+
+
+\DeclareWitness{M}{\emph{M}}{Codex Mediceus}
+[origDate={saec. \textsc{v}}]
+\DeclareWitness{P}{\emph{P}}{Codex Palatinus}
+  [origDate={saec. \textsc{iv}}]
+\DeclareWitness{R}{\emph{R}}{Codex Romanus}
+  [origDate={saec. \textsc{v}}]
+\DeclareWitness{V}{\emph{V}}{Schedae Veronenses rescriptae}
+  [origDate={saec. \textsc{v}}]
+
+\DeclareShorthand{coddPR}{\emph{codd.}}{P,R}
+  
+\DeclareWitness{a}{\emph{α}}{Codex Mediolanensis biblioth. Ambrosianae, olim Petrarcae} %les id en alphabet latin car c'est trop compliqué de les passer en grec
+  [origDate={saec. \textsc{vxiii-xiv}}]
+\DeclareWitness{c}{\emph{γ}}{Codex Guelferbytanus Gudianus 2\textsuperscript{o}, 70.}
+  [origDate={saec. \textsc{ix}}]
+
+  \DeclareSource{Serv}{\textsc{Serv.}} %@Servius (4e s. apr.) a commenté les Bucoliques de Virgile (https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a2007.01.0092). Donc pour établir le texte des Buc. de Virg., on consulte aussi ce genre de textes anciens. C'est une source. 
+  \DeclareSource{Daniel}{\textsc{Daniel.}} 
+  \DeclareSource{Philarg}{\textsc{Philarg.}} %https://fr.wikipedia.org/wiki/Junius_Philargyrius
+  \DeclareSource{Donat}{\textsc{Donat.}} 
+  \DeclareSource{Schol}{\textsc{Schol. Bern.}}
+
+  \DeclareSource{Quintil}{\textsc{Quintil.}} %Quintil et Asper ne sont pas recensés dans le CS mais ils pourraient être considérés comme des sources. 
+  \DeclareSource{Asper}{\textsc{Asper.}}
+
+\SetLineation{lineation=none,vmodulo} %numérotation toutes les 5 lignes, plus difficile à implémenter pour la version française. 
+
+\DeclareApparatus{default}
+
+\begin{document}
+
+
+\maketitle
+
+
+
+\begin{alignment}
+
+\begin{translation}
+
+\begin{center}\huge\textsc{Virgile}\end{center}
+
+\begin{center}\large\textsc{Bucoliques}\end{center}
+
+\begin{center}\large I\end{center}
+
+\end{translation}
+\begin{edition}
+
+\begin{center}\huge\textsc{P. Vergili Maronis}\end{center}
+
+\begin{center}\large\textsc{Bvcolica}\end{center}
+
+\begin{center}\large I\end{center}
+\end{edition}
+
+\end{alignment}
+
+
+\begin{alignment}
+
+%%% --- PAR. 1 --- %%%
+
+\begin{translation}
+
+\begin{center}\textsc{Mélibée}\end{center}
+
+Toi, Tityre, étendu sous le couvert d'un large hêtre, tu essaies un air silvestre sur un mince pipeau; nous autres, nou quittons notre pays et nos chères campagnes; loin du pays nous sommes exilés; toi, Tityre, nonchalant sous l'ombrage, tu apprends aux bois à redire le nom de la belle Amaryllis. 
+
+\end{translation}
+
+\begin{edition}
+
+\begin{center}\textsc{Meliboevs}\end{center}
+\begin{ekdverse}
+Tityre, tu patulae recubans sub tegmine fagi\\
+\app{
+  \lem[wit={coddPR}]{siluestrem}
+  \rdg[source={Quintil}]{agrestem}
+  \note{(IX, 4, 85) cf. B. 6, 8}
+  }
+tenui musa meditaris auena~;\\
+nos patriae finis et dulcia linquimus arua~;\\
+nos patriam fugimus~; tu, Tityre, lentus in umbra,\\
+\app{
+  \lem[wit={P,R,a,c}]{formosam}
+  \rdg[source={Asper}, alt={---onsam}]{formonsam}
+  \note{(\emph{Append. Seruiana, Hagen}, p.~540)}
+} resonare doces Amaryllida siluas.\\
+\end{ekdverse}
+
+\end{edition}
+
+%%% --- PAR. 2 --- %%%
+
+\begin{translation}
+
+\begin{center}\textsc{Tityre}\end{center}
+
+
+O Mélibée, c'est à un dieu que nous devons ces loisirs~; car Il sera pour moi toujours un dieu~; son autel, une tendre victime, un agneau de nos bergeries, souvent l'ensanglantera. Grâce à Lui, mes génisses ont le droit de paître en liberté, comme tu vois, et moi-même celui de jouer mes airs préférés sur un roseau rustique.
+
+\end{translation}
+
+\begin{edition}
+    \begin{center}\textsc{Tityrvs}\end{center}
+    \begin{ekdverse}
+O Meliboee, deus nobis haec otia fecit~:\\
+namque erit ille mihi semper deus~; illius aram\\
+saepe tener nostris ab ouilibus imbuet agnus.\\
+Ille meas errare boues, ut cernis, et ipsum\\
+ludere quae uellem calamo permisit agresti.\\
+\end{ekdverse}
+\end{edition}
+
+
+%%% --- PAR. 3 --- %%%
+
+
+\begin{translation}
+
+\begin{center}\textsc{Mélibée}\end{center}
+
+
+Je ne suis point jaloux, mais étonné plutôt~; partout, dans les campagnes, il y a tant de désordre~! Vois~: mes pauvres chèvres, je les pousse, dolent, droit devant moi~; et celle-ci, Tityre, j'ai peine à la tirer~: ici, dans une touffe de coudriers, elle vient de mettre bas deux bessons, espoir du troupeau, hélas~! laissés sur le roc nu.
+
+\end{translation}
+\begin{edition}
+
+\begin{center}\textsc{Meliboevs}\end{center}
+\begin{ekdverse}
+Non equidem inuideo, miror magis~: undique totis\\
+usque adeo \app{
+  \lem[wit={a}, source={Quintil}]{turbatur}
+  \note{(I, 4, 28) \emph{probat} \textsc{Serv.}} %(Servius approuve la leçon turbatur donnée par Quintilien)
+  \rdg[wit={P,R,c}, alt={---mur}]{turbamur} %Attention, ici ce qui va entre accolade c'est ce qui est envoyé éventuellement en XML ; en XML, on veut ce qui se trouve dans le mss, soit turbamur et non pas ce qui se trouve sous forme abrégée dans l'apparat 
+} agris~! En ipse capellas\\
+\app{
+  \lem[wit={P,R}]{protinus}
+  \rdg[wit={a,c}, alt={---tenus}]{protenus}
+} aeger ago~; hanc etiam uix, Tityre, duco~:\\
+hic inter densas corylos modo namque gemellos,\\
+spem gregis, a~! silice in nuda conixa reliquit.\\
+\end{ekdverse}
+
+\end{edition}
+\end{alignment}
+
+\end{document}
+
+
+
